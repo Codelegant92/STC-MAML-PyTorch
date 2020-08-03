@@ -6,9 +6,9 @@ Our main contributions are:
 
 
 
-   We investigate the performance of MAML, as one of the most popular few-shot learning solutions, on a speech task.
-   We extend the original MAML to solve a more realistic N+M-way, K-shot problem.
-   We investigate how much a user-defined spoken term classification system can get close to a predefined one.
+We investigate the performance of MAML, as one of the most popular few-shot learning solutions, on a speech task.
+We extend the original MAML to solve a more realistic N+M-way, K-shot problem.
+We investigate how much a user-defined spoken term classification system can get close to a predefined one.
  
 
 The code is based on an PyTorch implementation of MAML [MAML-PyTorch](https://github.com/dragen1860/MAML-Pytorch).
