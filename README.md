@@ -17,4 +17,4 @@ The code is based on an PyTorch implementation of MAML [MAML-PyTorch](https://gi
 1. We use the raw data from the dataset which contains 35 keywords: 'yes', 'no', 'up', 'down', 'left', 'right', 'on', 'off', 'stop', 'go', 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'cat', 'tree', 'house', 'bird', 'visual', 'backward', 'follow', 'forward', 'learn', 'sheila', 'bed', 'dog', 'happy', 'marvin', 'wow'.
 2. We split the dataset into different parts to satisfy our experimental setting:
 
-![filepaths](/img/filepaths.png)
+![filepaths](/img/filepaths.png =200x)
