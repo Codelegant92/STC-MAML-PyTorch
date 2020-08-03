@@ -15,12 +15,5 @@ The code is based on an PyTorch implementation of MAML [MAML-PyTorch](https://gi
 
 ## Dataset - Google Speech Commands dataset v2
 1. We use the raw data from the dataset which contains 35 keywords: 'yes', 'no', 'up', 'down', 'left', 'right', 'on', 'off', 'stop', 'go', 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'cat', 'tree', 'house', 'bird', 'visual', 'backward', 'follow', 'forward', 'learn', 'sheila', 'bed', 'dog', 'happy', 'marvin', 'wow'.
-2. 
-3. 
-speech_commands/
->yes
->>00f0204f_nohash_0.wav
-train_commands.csv
-test_commands.csv
-train_digits.csv
-test_digits.csv
+2. We split the dataset into different parts to satisfy our experimental setting:
+
