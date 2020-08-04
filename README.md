@@ -32,8 +32,7 @@ data/
 
 ```
 ## Train and test
-1. Run `python train.py` to train the model.
-2. A series of arguments can be added thereafter:
+1. Run `python train.py` followed by a series of arguments:
 ```shell
 --task_type
 --k_spt_train
