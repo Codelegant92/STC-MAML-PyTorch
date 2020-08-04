@@ -50,7 +50,7 @@ def train(model, mini_train, model_path, resume_itr, device, writer):
                 [unk & silence: [#-spt-train: {}], [#-qry-train: {}], [#-spt-test: {}], [#-qry-test: {}]]===============================".format(step, args.k_spt_train,
                 args.k_qry_train, args.k_spt_test, args.k_qry_test, args.k_spt_unk_train, args.k_qry_unk_train, args.k_spt_unk_test, args.k_qry_unk_test))
             # because of the limited dataset, we don't use a validation set. instead we evaluate the training model every 500 iterations.
-            mini_test = CommandData('../data', mode='test', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_test,
+            mini_test = CommandData('./data', mode='test', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_test,
                              k_query=args.k_qry_test, k_unk_shot=args.k_spt_unk_test, k_unk_query=args.k_qry_unk_test,
                              k_silence_shot=args.k_spt_silence_test, k_silence_query=args.k_qry_silence_test,
                              batchsz=100, resize=args.imgsz, unk_spt=False)
@@ -124,7 +124,7 @@ def test(model, model_file, device):
         [unk & silence: [#-spt-train: {}], [#-qry-train: {}], [#-spt-test: {}], [#-qry-test: {}]]===============================".format(args.k_spt_train,
         args.k_qry_train, args.k_spt_test, args.k_qry_test, args.k_spt_unk_train, args.k_qry_unk_train, args.k_spt_unk_test, args.k_qry_unk_test))
     
-    mini_test = CommandData('../data', mode='test', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_test,
+    mini_test = CommandData('./data', mode='test', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_test,
                              k_query=args.k_qry_test, k_unk_shot=args.k_spt_unk_test, k_unk_query=args.k_qry_unk_test,
                              k_silence_shot=args.k_spt_silence_test, k_silence_query=args.k_qry_silence_test,
                              batchsz=100, resize=args.imgsz, unk_spt=args.unk_spt)
@@ -213,7 +213,7 @@ def main():
 
     # batchsz here means total sampled meta-task number
     if args.train == 'True':
-        mini_train = CommandData('../data', mode='train', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_train,
+        mini_train = CommandData('./data', mode='train', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_train,
                         k_query=args.k_qry_train, k_unk_shot=args.k_spt_unk_train, k_unk_query=args.k_qry_unk_train,
                         k_silence_shot=args.k_spt_silence_train, k_silence_query=args.k_qry_silence_train,
                         batchsz=160000, resize=args.imgsz, unk_spt=args.unk_spt)
