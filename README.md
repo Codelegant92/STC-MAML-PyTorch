@@ -7,7 +7,7 @@ Our main contributions are:
 + We extend the original MAML to solve a more realistic N+M-way, K-shot problem.
 + We investigate how much a user-defined spoken term classification system can get close to a predefined one.
  
-The code is based on an PyTorch implementation of MAML [MAML-PyTorch](https://github.com/dragen1860/MAML-Pytorch).
+Our implementation is based on a PyTorch implementation of MAML [MAML-PyTorch](https://github.com/dragen1860/MAML-Pytorch). Thanks to @[dragen1860](https://github.com/dragen1860).
 
 ## Prerequisites
 + python: 3.x
