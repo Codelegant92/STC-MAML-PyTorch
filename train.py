@@ -139,8 +139,7 @@ def test(model, model_file, device):
         x_spt, y_spt, x_qry, y_qry = x_spt.squeeze(0).to(device), y_spt.squeeze(0).to(device), \
                                                  x_qry.squeeze(0).to(device), y_qry.squeeze(0).to(device)
 
-        #accs, unk_tps, unk_fps, silence_tps, silence_fps, accs_normal = model.finetunning(x_spt, y_spt, x_qry, y_qry, args.update_step_test)
-        accs, unk_tps, unk_fps, silence_tps, silence_fps, accs_normal = model.finetunning(x_spt, y_spt, x_qry, y_qry, 1000)
+        accs, unk_tps, unk_fps, silence_tps, silence_fps, accs_normal = model.finetunning(x_spt, y_spt, x_qry, y_qry, args.update_step_test)
         num_keywords_qry_samples_test = args.n_way*args.k_qry_test*1.0
         num_unknown_qry_samples_test = args.k_qry_unk_test*1.0
         num_silence_qry_samples_test = args.k_qry_silence_test*1.0
