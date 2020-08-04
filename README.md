@@ -1,4 +1,4 @@
-# SpokenTermClassification-MAML-PyTorch
+# STC-MAML-PyTorch
 ## A PyTorch Implementation of an Extended MAML Algorithm for Few-Shot Spoken Term Classification
 This repository presents an extended-MAML approach to address the user-defined spoken term classification task. For a detailed description of the work, please refer to [our paper](https://arxiv.org/abs/1812.10233)。
 
@@ -7,7 +7,7 @@ Our main contributions are:
 + We extend the original MAML to solve a more realistic N+M-way, K-shot problem.
 + We investigate how much a user-defined spoken term classification system can get close to a predefined one.
  
-Our implementation is based on a PyTorch implementation of MAML [MAML-PyTorch](https://github.com/dragen1860/MAML-Pytorch). Thanks to @[dragen1860](https://github.com/dragen1860).
+Our implementation is based on a PyTorch implementation of MAML [MAML-PyTorch](https://github.com/dragen1860/MAML-Pytorch).
 
 ## Prerequisites
 + python: 3.x
