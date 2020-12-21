@@ -53,7 +53,7 @@ If the code and the work is useful to you, please cite it:
   title={An Investigation of Few-Shot Learning in Spoken Term Classification.},
   author={Chen, Yangbin and Ko, Tom and Shang, Lifeng and Chen, Xiao and Jiang, Xin and Li, Qing},
   booktitle={Proceedings of Interspeech},
-  year={2019}
+  year={2020}
 }
 
 ```
