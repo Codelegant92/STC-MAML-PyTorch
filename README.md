@@ -49,10 +49,11 @@ data/
 ## Cite our paper
 If the code and the work is useful to you, please cite it:
 ```shell
-@article{chen2018investigation,
-  title={An Investigation of Few-Shot Learning in Spoken Term Classification},
+@inproceedings{chen2020investigation,
+  title={An Investigation of Few-Shot Learning in Spoken Term Classification.},
   author={Chen, Yangbin and Ko, Tom and Shang, Lifeng and Chen, Xiao and Jiang, Xin and Li, Qing},
-  journal={arXiv preprint arXiv:1812.10233},
-  year={2018}
+  booktitle={Proceedings of Interspeech},
+  year={2019}
 }
+
 ```
