@@ -53,7 +53,7 @@ def train(model, mini_train, model_path, resume_itr, device, writer):
             mini_test = CommandData('./data', mode='test', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_test,
                              k_query=args.k_qry_test, k_unk_shot=args.k_spt_unk_test, k_unk_query=args.k_qry_unk_test,
                              k_silence_shot=args.k_spt_silence_test, k_silence_query=args.k_qry_silence_test,
-                             batchsz=100, resize=args.imgsz, unk_spt=False)
+                             batchsz=100, resize=args.imgsz, unk_sil_spt=False)
             db_test = DataLoader(mini_test, 1, shuffle=True, num_workers=1, pin_memory=True)
             accs_all_test = []
             accs_normal_test = []
@@ -127,7 +127,7 @@ def test(model, model_file, device):
     mini_test = CommandData('./data', mode='test', task_type=args.task_type, n_way=args.n_way, k_shot=args.k_spt_test,
                              k_query=args.k_qry_test, k_unk_shot=args.k_spt_unk_test, k_unk_query=args.k_qry_unk_test,
                              k_silence_shot=args.k_spt_silence_test, k_silence_query=args.k_qry_silence_test,
-                             batchsz=100, resize=args.imgsz, unk_spt=args.unk_spt)
+                             batchsz=100, resize=args.imgsz, unk_sil_spt=args.unk_sil_spt)
 
     db_test = DataLoader(mini_test, 1, shuffle=True, num_workers=1, pin_memory=True)
     accs_all_test = []
