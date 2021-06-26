@@ -168,13 +168,15 @@ class CommandData(Dataset):
 
     def preprocess_mfcc(self, wave):
         spectrogram = librosa.feature.melspectrogram(wave, sr=self.sr, n_mels=40, hop_length=160, n_fft=480, fmin=20, fmax=4000)
+        '''
         idx = [spectrogram > 0]
         spectrogram[tuple(idx)] = np.log(spectrogram[tuple(idx)])
         dct_filters = librosa.filters.dct(n_filters=40, n_input=40)
         mfcc = [np.matmul(dct_filters, x) for x in np.split(spectrogram, spectrogram.shape[1], axis=1)]
         mfcc = np.hstack(mfcc)
         mfcc = mfcc.astype(np.float32)
-        #mfcc = librosa.feature.mfcc(S=spectrogram, n_mfcc=40).astype(np.float32)
+        '''
+        mfcc = librosa.feature.mfcc(S=librosa.power_to_db(spectrogram))
         return mfcc
 
     def __getitem__(self, index):
