@@ -17,7 +17,7 @@ def mean_confidence_interval(accs, confidence=0.95):
     h = se * scipy.stats.t._ppf((1 + confidence) / 2, n - 1)
     return m, h
 
-def train(model, mini_train, model_path, resume_itr, device, writer):
+def train_func(model, mini_train, model_path, resume_itr, device, writer):
 
     if resume_itr > 0:
         model = torch.load(model_path+'/model-'+str(resume_itr)+'.pth')
@@ -112,7 +112,7 @@ def train(model, mini_train, model_path, resume_itr, device, writer):
             torch.save(model, model_path+'/'+'model-'+str(step)+'.pth')
     writer.close()
 
-def test(model, model_file, device):
+def test_func(model, model_file, device):
     print(model_file)
     model = torch.load(model_file)
     model.eval()
@@ -227,11 +227,11 @@ def main():
             print("logs directory ", args.logdir, " created!")
         writer = SummaryWriter(model_path)
         set_logger(os.path.join(args.logdir, 'train.log'))
-        train(maml, mini_train, model_path, args.resume_itr, device, writer)
+        train_func(maml, mini_train, model_path, args.resume_itr, device, writer)
     else:
         if args.test_iter >= 0:
             model_file = model_path + '/' + 'model-' + str(args.test_iter) + '.pth'
-            test(maml, model_file, device)
+            test_func(maml, model_file, device)
 
 if __name__ == '__main__':
 
